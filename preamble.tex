@@ -1,0 +1,93 @@
+\usepackage{lipsum}
+\usepackage{xspace}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+\usepackage[british]{babel}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\usepackage[noend]{algorithmic}
+\usepackage[ruled]{algorithm}
+\usepackage{smartdiagram}
+\usesmartdiagramlibrary{additions}
+
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes,arrows}
+
+\pgfplotsset{compat=1.14}
+
+\lstset{
+ language=Java,
+ basicstyle=\ttfamily,
+ breaklines=true,
+ mathescape,
+}
+
+\def\algorithmautorefname{Algorithm}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+\def\subsubsectionautorefname{Section}
+
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+
+% General Commands %
+\newcommand{\placeholder}{\textcolor{red}}
+\newcommand{\etal}{\emph{et al.}\xspace}
+\newcommand{\ie}{\emph{i.e.}\xspace}
+\newcommand{\etc}{\emph{etc}\xspace}
+\newcommand{\wrt}{\emph{w.r.t}\xspace}
+\newcommand{\eg}{\emph{e.g.}\xspace}
+\newcommand{\vs}{\emph{vs.}\xspace}
+
+
+
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+
+\newcommand{\twocol}[2]{
+\vspace*{-0.8cm}
+\begin{multicols}{2}
+    #1
+    \break
+    #2
+\end{multicols}
+}
+
+\newcommand{\resultsbox}[1]{
+\vspace*{2mm}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{#1}}
+% \vspace*{2mm}
+}
+
+\newenvironment{intro_block}
+{\noindent\rule{\linewidth}{0.6pt}\par}
+{\par\noindent\rule{\linewidth}{0.6pt}}
+
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+\def\subsubsectionautorefname{Section}
+
+\usepackage{array}
+\newcommand{\head}[2]{\multicolumn{1}{>{\centering\arraybackslash}p{#1}}{\textbf{#2}}}
+
+
+% Layout settings
+\def\baselinestretch{1.5}
+
+\addtolength{\oddsidemargin}{-.375in}
+\addtolength{\evensidemargin}{-.375in}
+\addtolength{\textwidth}{+.75in}
+
+\renewcommand{\rmdefault}{ppl}
